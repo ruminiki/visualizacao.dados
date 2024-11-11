@@ -1,0 +1,185 @@
+country,population,lifeexp,income,continent
+Afghanistan,36400000,58.7,1870,Asia
+Albania,2930000,78.0,12400,Europe
+Algeria,42000000,77.9,13700,Africa
+Angola,30800000,65.2,5850,Africa
+Antigua and Barbuda,103000,77.6,21000,Americas
+Argentina,44700000,77.0,18900,Americas
+Armenia,2930000,76.0,8660,Asia
+Australia,24800000,82.9,45800,Oceania
+Austria,8750000,81.8,44600,Europe
+Azerbaijan,9920000,72.3,16600,Asia
+Bahamas,399000,74.1,21900,Americas
+Bahrain,1570000,77.2,44300,Asia
+Bangladesh,166000000,73.4,3720,Asia
+Barbados,286000,76.8,16000,Americas
+Belarus,9450000,73.8,17200,Europe
+Belgium,11500000,81.2,42800,Europe
+Belize,382000,72.5,7710,Americas
+Benin,11500000,65.0,2170,Africa
+Bhutan,817000,74.8,9930,Asia
+Bolivia,11200000,74.0,6980,Americas
+Bosnia and Herzegovina,3500000,77.9,12100,Europe
+Botswana,2330000,66.9,16500,Africa
+Brazil,211000000,75.7,14300,Americas
+Brunei,434000,77.4,76900,Asia
+Bulgaria,7040000,75.3,18900,Europe
+Burkina Faso,19800000,61.6,1710,Africa
+Burundi,11200000,61.1,691,Africa
+Cambodia,16200000,69.3,3830,Asia
+Cameroon,24700000,61.2,3170,Africa
+Canada,37000000,82.2,43800,Americas
+Cape Verde,553000,74.1,6420,Africa
+Central African Republic,4740000,51.6,689,Africa
+Chad,15400000,60.5,1860,Africa
+Chile,18200000,80.7,23400,Americas
+China,1420000000,76.9,16000,Asia
+Colombia,49500000,78.6,13700,Americas
+Comoros,832000,68.0,1440,Africa
+"Congo, Dem. Rep.",84000000,62.4,751,Africa
+"Congo, Rep.",5400000,63.9,5620,Africa
+Costa Rica,4950000,81.4,16200,Americas
+Cote d'Ivoire,24900000,61.2,3760,Africa
+Croatia,4160000,77.7,22600,Europe
+Cuba,11500000,79.3,20000,Americas
+Cyprus,1190000,80.8,32200,Asia
+Czech Republic,10600000,79.4,32300,Europe
+Denmark,5750000,81.1,46600,Europe
+Djibouti,971000,67.1,3540,Africa
+Dominican Republic,10900000,76.1,15200,Americas
+Ecuador,16900000,78.3,10200,Americas
+Egypt,99400000,72.6,10800,Africa
+El Salvador,6410000,75.8,8290,Americas
+Equatorial Guinea,1310000,66.1,20500,Africa
+Eritrea,5190000,64.6,1250,Africa
+Estonia,1310000,77.7,29500,Europe
+Ethiopia,108000000,66.4,1800,Africa
+Fiji,912000,65.8,9420,Oceania
+Finland,5540000,82.1,40300,Europe
+France,65200000,82.6,39000,Europe
+Gabon,2070000,67.3,17500,Africa
+Gambia,2160000,67.8,1570,Africa
+Georgia,3910000,74.3,10100,Asia
+Germany,82300000,81.3,45200,Europe
+Ghana,29500000,66.6,4380,Africa
+Greece,11100000,81.3,25500,Europe
+Grenada,108000,71.9,13500,Americas
+Guatemala,17200000,73.2,7530,Americas
+Guinea,13100000,61.9,1280,Africa
+Guinea-Bissau,1910000,59.7,1550,Africa
+Guyana,782000,68.2,7740,Americas
+Haiti,11100000,64.5,1710,Americas
+Honduras,9420000,73.1,4590,Americas
+Hungary,9690000,75.9,26900,Europe
+Iceland,338000,82.6,47400,Europe
+India,1350000000,69.1,6890,Asia
+Indonesia,267000000,72.0,11700,Asia
+Iran,82000000,76.5,17400,Asia
+Iraq,39300000,68.0,15900,Asia
+Ireland,4800000,81.5,65600,Europe
+Israel,8450000,82.4,33400,Asia
+Italy,59300000,82.6,35200,Europe
+Jamaica,2900000,75.2,8520,Americas
+Japan,127000000,84.2,39100,Asia
+Jordan,9900000,76.7,8450,Asia
+Kazakhstan,18400000,72.0,24200,Asia
+Kenya,51000000,67.3,3110,Africa
+Kiribati,118000,62.2,1890,Oceania
+Kuwait,4200000,80.0,68400,Asia
+Kyrgyz Republic,6130000,71.5,3490,Asia
+Lao,6960000,67.9,6310,Asia
+Latvia,1930000,75.1,25500,Europe
+Lebanon,6090000,80.5,13400,Asia
+Lesotho,2260000,51.1,2960,Africa
+Liberia,4850000,65.4,801,Africa
+Libya,6470000,75.5,18300,Africa
+Lithuania,2880000,75.3,30400,Europe
+Luxembourg,590000,82.4,99000,Europe
+"Macedonia, FYR",2090000,75.2,14000,Europe
+Madagascar,26300000,63.4,1460,Africa
+Malawi,19200000,61.0,1130,Africa
+Malaysia,32000000,75.9,27200,Asia
+Maldives,444000,80.1,13000,Asia
+Mali,19100000,62.9,2020,Africa
+Malta,432000,81.8,37900,Europe
+Mauritania,4540000,70.6,3670,Africa
+Mauritius,1270000,74.9,21000,Africa
+Mexico,131000000,76.8,17300,Americas
+"Micronesia, Fed. Sts.",106000,65.8,3410,Oceania
+Moldova,4040000,72.4,5330,Europe
+Mongolia,3120000,68.7,12100,Asia
+Montenegro,629000,77.3,16600,Europe
+Morocco,36200000,75.5,7720,Africa
+Mozambique,30500000,61.1,1200,Africa
+Myanmar,53900000,70.3,6100,Asia
+Namibia,2590000,65.7,10500,Africa
+Nepal,29600000,71.5,2420,Asia
+Netherlands,17100000,81.9,48500,Europe
+New Zealand,4750000,81.8,36400,Oceania
+Nicaragua,6280000,78.7,5470,Americas
+Niger,22300000,62.5,949,Africa
+Nigeria,196000000,66.1,5570,Africa
+North Korea,25600000,71.1,1390,Asia
+Norway,5350000,82.4,64800,Europe
+Oman,4830000,78.1,38900,Asia
+Pakistan,201000000,68.0,5220,Asia
+Palestine,5050000,72.2,2700,Asia
+Panama,4160000,79.4,23400,Americas
+Papua New Guinea,8420000,61.1,2800,Oceania
+Paraguay,6900000,74.8,9280,Americas
+Peru,32600000,80.2,12700,Americas
+Philippines,107000000,70.5,7960,Asia
+Poland,38100000,78.2,27700,Europe
+Portugal,10300000,81.3,27900,Europe
+Qatar,2690000,80.7,121000,Asia
+Romania,19600000,75.5,23400,Europe
+Russia,144000000,71.1,24800,Europe
+Rwanda,12500000,68.3,1930,Africa
+Samoa,198000,72.4,5950,Oceania
+Sao Tome and Principe,209000,70.9,3190,Africa
+Saudi Arabia,33600000,77.6,50100,Asia
+Senegal,16300000,66.8,2570,Africa
+Serbia,8760000,76.2,14800,Europe
+Seychelles,95200,74.2,27500,Africa
+Sierra Leone,7720000,60.0,1490,Africa
+Singapore,5790000,84.0,83900,Asia
+Slovak Republic,5450000,77.2,31400,Europe
+Slovenia,2080000,81.1,30900,Europe
+Solomon Islands,623000,63.6,2110,Oceania
+Somalia,15200000,58.0,629,Africa
+South Africa,57400000,63.5,12300,Africa
+South Korea,51200000,81.3,36800,Asia
+South Sudan,12900000,60.7,1820,Africa
+Spain,46400000,83.2,34700,Europe
+Sri Lanka,21000000,77.8,12400,Asia
+St. Lucia,180000,76.6,10900,Americas
+St. Vincent and the Grenadines,110000,72.0,11400,Americas
+Sudan,41500000,68.8,4440,Africa
+Suriname,568000,71.6,13200,Americas
+Swaziland,1390000,58.6,7600,Africa
+Sweden,9980000,82.4,47500,Europe
+Switzerland,8540000,83.5,57100,Europe
+Syria,18300000,69.8,2900,Asia
+Tajikistan,9110000,72.2,2920,Asia
+Tanzania,59100000,65.5,2780,Africa
+Thailand,69200000,78.2,16900,Asia
+Timor-Leste,1320000,73.3,1490,Asia
+Togo,7990000,63.1,1480,Africa
+Tonga,109000,70.7,5500,Oceania
+Trinidad and Tobago,1370000,73.4,30300,Americas
+Tunisia,11700000,78.0,11600,Africa
+Turkey,81900000,79.6,24900,Asia
+Turkmenistan,5850000,70.5,17900,Asia
+Uganda,44300000,62.9,1820,Africa
+Ukraine,44000000,72.3,8330,Europe
+United Arab Emirates,9540000,76.9,68200,Asia
+United Kingdom,66600000,81.2,40100,Europe
+United States,327000000,79.1,54900,Americas
+Uruguay,3470000,77.6,21300,Americas
+Uzbekistan,32400000,70.5,6690,Asia
+Vanuatu,282000,64.3,2900,Oceania
+Venezuela,32400000,75.9,14200,Americas
+Vietnam,96500000,74.9,6550,Asia
+Yemen,28900000,67.1,2430,Asia
+Zambia,17600000,59.5,3870,Africa
+Zimbabwe,16900000,60.2,1950,Africa
