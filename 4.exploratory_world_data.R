@@ -7,27 +7,32 @@ library(scales)
 # Reference: 
 ##################
 
+df <- read.csv("data/world_data_by_country.csv", sep=",")
 
-df <- read.csv("data/world_data.csv", sep=",")
+df <- df %>% filter(sigla %in% c('BRA', 'USA', 'ENG', 'PAR', 'ARG'))
 
-df <- df %>% filter(continente %in% c('Europe & Central Asia', 'Africa Eastern and Southern', 'Latin America & Caribbean', 'North America', 'Pacific island small states'))
-
-df %>% ggplot(aes(x = continente, y = pib_corrente, fill = continente)) +
+df %>% ggplot(aes(x = pais, y = pib_corrente, fill = pais)) +
   geom_bar(stat = "identity") +
-  scale_y_log10() +
+  geom_line(aes(x=pais, y=inflacao))+
+  #scale_y_log10() +
   theme_minimal() +
   theme(legend.position = "none")
 
-10^log10(10000)
 
-log10(50)
-10 ^ 1.69897
+df %>% ggplot(aes(x = pais, y = pib_corrente, fill = pais)) +
+  geom_bar(stat = "identity") +
+  geom_line(aes(x=pais, y=inflacao))+
+  #scale_y_log10() +
+  theme_minimal() +
+  theme(legend.position = "none")
 
-log2(50)
-2 ^ 5.64
 
-print(format(1e+05, scientific = F))
-
-colnames(df)
-
+df %>%
+  group_by(continente) %>%
+  summarise(media_desemprego = mean(desemprego_total, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(continente, media_desemprego), y = media_desemprego)) +
+  geom_bar(stat = "identity", fill="steelblue") +
+  coord_flip() +
+  labs(title = "Average Unemployment Rate by Continent", x = "Continent", y = "Average Unemployment Rate") +
+  theme_minimal()
 

@@ -14,18 +14,32 @@ glimpse(titanic)
 #Ajuste rótulos dos eixo x e y
 #Crie variações com barras empilhadas e agrupadas (position = "dodge/fill/stack")
 
-ggplot(titanic, aes(x = factor(Pclass), fill = factor(Survived))) +
-  geom_bar(position = "fill") +  # "fill" makes it proportional, showing survival rate
-  scale_y_continuous(labels = scales::percent) +  # Convert y-axis to percentage
-  scale_fill_manual(values = c("0" = "#d5d5d5", "1" = "#57cbc3")) +
-  coord_flip() +
+titanic <- titanic %>% mutate(Survived = as.factor(ifelse(Survived=='0', 'Não', 'Sim')),
+                              Pclass = as.factor(Pclass))
+
+ggplot(titanic, aes(x = Pclass, fill = Survived)) +
+  geom_bar(position="dodge") +  # "fill" makes it proportional, showing survival rate
+
+  # Destaca o título e subtítulo para contexto claro sobre terceira classe
   labs(
     title = "Distribuição de Sobrevivência por Classe no Titanic",
-    subtitle = "Proporção mostra que 75% dos passageiros na terceira classe não sobreviveram.",
-    x = "Sobrevivência",
-    y = "Densidade",
-    fill = "Sobreviveu") +
-  theme_minimal()
+    x = "Classe do Passageiro",
+    y = "Proporção Sobrevivência",
+    fill = "Sobreviveu"
+  ) +
+  
+  # Define o tema
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_blank(),               # Remove as linhas de grade horizontais para foco na classe
+    panel.grid.minor.y = element_blank(),               # Remove grade menor
+    axis.title = element_text(size = 14, face = "bold"),# Aumenta o tamanho da fonte dos títulos dos eixos
+    axis.text = element_text(size = 12),                # Aumenta o tamanho da fonte dos rótulos dos eixos
+    legend.position = "top",                            # Coloca a legenda no topo do gráfico
+    legend.title = element_text(face = "bold")          # Destaca título da legenda
+  )
+
+
 
 
 ggplot(titanic, aes(x = factor(Survived), y = Age, fill = Sex)) +
