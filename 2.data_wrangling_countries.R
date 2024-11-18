@@ -134,6 +134,8 @@ assign_continent <- function(country) {
                             "Nauru", "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", 
                             "Tonga", "Tuvalu", "Vanuatu", "American Samoa", "French Polynesia", "Guam", "New Caledonia", "Northern Mariana Islands")) {
     return("Oceania")
+  } else if (country %in% c("World")) {
+      return("World")
   } else {
     return("Other")
   }
@@ -142,8 +144,10 @@ assign_continent <- function(country) {
 # Aplicar a função aos países e criar o atributo continente
 tmp$continente <- sapply(tmp$pais, assign_continent)
 
-#aux <- tmp %>% filter(continente == "Other")
-#unique(aux$pais)
+aux <- tmp %>% filter(continente == "Other")
+unique(aux$pais)
+
+tmp <- tmp %>% relocate(continente, .after="sigla")
 
 #as.data.frame(unique(tmp$pais))
 
