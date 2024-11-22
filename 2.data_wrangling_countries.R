@@ -22,14 +22,14 @@ library(car)
 library(mctest)
 
 #carrega o dataset
-dataset <- read.csv("data/world_data_countries.csv", sep = ",")
+dataset <- read.csv("data/world_data_raw.csv", sep = ",")
 
 # Informações básicas do banco de dados
 dim(dataset)
 glimpse(dataset)
 
 #nomes das colunas anos
-anos <- colnames(dataset[,5:18])
+anos <- colnames(dataset[,5:29])
 
 #renomeia colunas que não são anos
 dataset <- dataset %>% 
@@ -39,7 +39,7 @@ dataset <- dataset %>%
          codigo_serie = 4)
 
 #seleciona apenas registros válidos
-dataset <- dataset[1:4578,-c(4)]
+dataset <- dataset[1:4641,-c(4)]
 
 #transforma as colunas ano uma coluna, repetindo o pais para cada ano
 tmp <- pivot_longer(dataset,
@@ -63,14 +63,14 @@ as.data.frame(colnames(tmp))
 tmp <- tmp %>% rename(pib_corrente = 4,
                       pib_gasto_saude = 5,
                       pib_per_capita = 6,
-                      pib_per_capita_crescimento = 7,
-                      pib_taxa_crescimento = 8,
+                      pib_taxa_crescimento = 7,
+                      pib_per_capita_crescimento = 8,
                       inflacao = 9,
-                      expec_vida = 10,
+                      expec_vida_mulheres = 10,
                       expec_vida_homens = 11,
-                      expec_vida_mulheres = 12,
-                      desemprego_ensino_superior = 13,
-                      desemprego_total = 14,
+                      expec_vida = 12,
+                      desemprego_total = 13,
+                      desemprego_ensino_superior = 14,
                       controle_corrupcao = 15,
                       acesso_energia_eletrica = 16,
                       cobertura_programas_sociais = 17,
@@ -136,8 +136,14 @@ assign_continent <- function(country) {
     return("Oceania")
   } else if (country %in% c("World")) {
       return("World")
+  } else if (country %in% c("Low income")) {
+    return("Low income")
+  } else if (country %in% c("High income")) {
+    return("High income")
+  } else if (country %in% c("Middle income")) {
+    return("Middle income")
   } else {
-    return("Other")
+   return("Other")
   }
 }
 
@@ -152,4 +158,4 @@ tmp <- tmp %>% relocate(continente, .after="sigla")
 #as.data.frame(unique(tmp$pais))
 
 #salva o resultado em um novo arquivo
-write.csv(tmp, "data/world_data_by_country.csv", fileEncoding = "UTF-8",  row.names = FALSE)
+write.csv(tmp, "data/world_data.csv", fileEncoding = "UTF-8",  row.names = FALSE)

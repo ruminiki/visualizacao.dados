@@ -1,13 +1,13 @@
 library(ggplot2)
 library(dplyr)
-library(scales)
+library(tidyr)
 
 ##################
 # LOAD DATA
 # Reference: World Data Bank
 ##################
 
-df <- read.csv("data/world_data_by_country.csv", sep=",")
+df <- read.csv("data/world_data.csv", sep=",")
 
 
 #Filtrar países de interesse
