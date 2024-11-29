@@ -21,6 +21,8 @@ df_chart %>% ggplot(aes(x = ano, y = crescimento_populacional, color = continent
   labs(title = "Taxa de Crescimento do PIB por Continente ao Longo do Tempo",
        x = "Ano", y = "Taxa de Crescimento do PIB (%)") 
 
+
+ggplot(df_chart, aes(x=0,y=0))
 ####################
 # DESTAQUE PARA UM CONTINENTE
 ####################
@@ -36,8 +38,8 @@ ggplot(df_chart, aes(x = ano, y = crescimento_populacional, group = continente))
   geom_point(aes(color = destaque, alpha = destaque)) +
   scale_color_manual(values = c("World" = "#5589c8", "Outros"="lightgray")) +
   scale_alpha_manual(values = c("World" = 1, "Outros" = 0.5)) +
-  labs(title = "Taxa de Crescimento do PIB por Continente (Destaque: Low income)",
-       x = "Ano", y = "Taxa de Crescimento do PIB (%)") +
+  labs(title = "Taxa de Crescimento Populacional por Continente (Destaque: World)",
+       x = "Ano", y = "Taxa de Crescimento Populacional (%)") +
   theme_minimal() +
   theme(legend.position = "none")
 
@@ -127,7 +129,7 @@ ggplot(df_chart, aes(x = ano, y = crescimento_populacional, group = continente))
   #            method = "loess", # Use LOESS smoothing
   #            size = 1, 
   #            se = FALSE) +  # Disable confidence interval shading
-  geom_hline(yintercept = mean(df_chart$crescimento_populacional), size = 0.2, linetype = "dashed", colour = "red") +
+  #geom_hline(yintercept = mean(df_chart$crescimento_populacional), size = 0.2, linetype = "dashed", colour = "red") +
   scale_color_manual(values = destaque_continentes, name = "Bloco Econômico") +
   scale_alpha_identity() +  # Use identity scale for alpha since we set it manually
   scale_x_continuous(limits = c(1999, 2023), breaks = seq(1999, 2023, by = 3)) +
@@ -149,8 +151,8 @@ ggplot(df_chart, aes(x = ano, y = crescimento_populacional, group = continente))
   ) +
   # Add labels for selected continents at the last year
   geom_text(data = subset(df_chart, ano == last_year & continente %in% names(destaque_continentes)),
-            aes(label = paste(continente, " (", round(crescimento_populacional,2, "%")), 
-            vjust = -0.5,      # Adjust vertical position of the text
+            aes(label = paste(round(crescimento_populacional,2), "%")), 
+            vjust = -0.3,      # Adjust vertical position of the text
             size = 4,          # Size of the text
             color = "black")+    # Color of the text
   geom_text(data = subset(df_chart, ano == 1999 & continente %in% names(destaque_continentes)),
