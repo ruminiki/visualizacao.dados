@@ -31,7 +31,7 @@ ggplot(data_long, aes(x = studytime, y = Media, fill = Notas)) +
     y = "Média das Notas",
     fill = "Notas"
   ) +
-  ylim(0, 20) + # Define os limites do eixo Y
+  #ylim(0, 20) + # Define os limites do eixo Y
   theme_minimal() +
   theme(
     panel.grid = element_blank(),                 # Remove todas as linhas de grade
@@ -95,25 +95,26 @@ ggplot(aux, aes(x = studytime, y = Media, color = Notas, group = Notas)) +
   scale_fill_viridis_d(option = "D") + # Aplica a paleta viridis
   labs(
     title = "Comparação das Médias de Notas (G1, G2, G3) por Tempo de Estudo",
-    subtitle = "Comparação entre grupos, indica que a quantidade de horas de estudo\ntem pouca influência sobre a nota.",
+    subtitle = "Comparação entre grupos, indica que a quantidade de horas de estudo\ntem pouca influência sobre a nota. No geral, o aumento é menor que 1  ponto.",
     x = "Tempo de Estudo",
     y = "Média das Notas",
     fill = "Notas"
   ) +
   scale_color_manual(values = c("G1" = "#5589c8", "G2"="lightgray", "G3"="lightgray"), name = "Grupos") +
   scale_alpha_manual(values = c("G1" = 1, "G2"=0.5, "G3"=0.5), name = "Grupos") +
-  annotate("text", x = "até 10h", y = 12.6, 
-           label = "G1 apresentou maior média de notas\nem ambos os casos", 
-           hjust = 0, vjust = 2.3, 
-           color = "black", size = 3, 
-           fontface = "italic") + # Anotação com caixa próxima a 2020
+  #annotate("text", x = "até 10h", y = 12.6, 
+  #         label = "G1 apresentou maior média de notas\nem ambos os casos", 
+  #         hjust = 0, vjust = 2.3, 
+  #         color = "black", size = 3, 
+  #         fontface = "italic") + # Anotação com caixa próxima a 2020
   ylim(10, 12.6) + # Define os limites do eixo Y
   theme_minimal() +
   theme(
-    panel.grid = element_blank(),                 # Remove todas as linhas de grade
-    axis.line = element_line(color = "gray"),    # Adiciona linha nos eixos X e Y
-    legend.position = "top",                      # Coloca a legenda no topo do gráfico
-    axis.title = element_text(size = 14),         # Aumenta o tamanho da fonte dos títulos dos eixos
-    axis.text = element_text(size = 12)           # Aumenta o tamanho da fonte dos rótulos dos eixos
+    panel.grid = element_blank(),            
+    axis.line = element_line(color = "gray"),
+    legend.position = "none",            
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    title =  element_text(size = 14)
   )
 
