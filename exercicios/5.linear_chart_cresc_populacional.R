@@ -22,7 +22,6 @@ df_chart %>% ggplot(aes(x = ano, y = crescimento_populacional, color = continent
        x = "Ano", y = "Taxa de Crescimento do PIB (%)") 
 
 
-ggplot(df_chart, aes(x=0,y=0))
 ####################
 # DESTAQUE PARA UM CONTINENTE
 ####################

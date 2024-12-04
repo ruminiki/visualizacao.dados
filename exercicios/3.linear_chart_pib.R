@@ -124,7 +124,7 @@ ggplot(df_chart, aes(x = ano, y = pib_taxa_crescimento, group = continente)) +
   labs(
     title = "Taxa de Crescimento do PIB por Continente (Destaque: Países de baixa renda)",
     subtitle = "Países do bloco apresentaram menor oscilação no PIB durante e no pós pandemia",
-    x = "Ano",
+    x = "",
     y = "Taxa de Crescimento do PIB (%)"
   ) +
   annotate("text", x = 2020, y = media_crescimento * 1.1, 
