@@ -1,14 +1,14 @@
 
 df <- read.csv("data/world_data_by_country.csv", sep=",")
 
-df <- df %>% filter(sigla %in% c("USA", "PAR", "BRA"))
+aux <- df %>% filter(sigla %in% c("USA", "PRY", "BRA"))
 
 # Calculando a média total das populações
 media_total <- mean(df$populacao_urbana)
 
 # Criando o gráfico
-ggplot(df, aes(x = pais, y = populacao_urbana)) +
-  geom_bar(stat = "identity", position = "fill") +
+ggplot(aux, aes(x = pais, y = populacao_urbana)) +
+  geom_bar(stat = "identity", position = "stack") +
   scale_fill_manual(values = c("populacao_urbana" = "#4E79A7", "populacao_urbana" = "#59A14F"),
                     name = "População") +
   geom_hline(yintercept = media_total, linetype = "dashed", color = "red", size = 1) +

@@ -25,8 +25,7 @@ df %>% ggplot(aes(x = income/1000, y = lifeexp, size = population/1000000, fill 
   theme(panel.grid.minor = element_blank()) +
   xlab("Income (GDP/capita, in thousands of dollars)") +
   ylab("Life expectancy (years)") +
-  ggtitle("Strong correlation between economic development and life expectancy") +
-  facet_wrap(~continent)
+  ggtitle("Strong correlation between economic development and life expectancy")
 
 
 
